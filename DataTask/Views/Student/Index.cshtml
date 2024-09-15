@@ -1,0 +1,23 @@
+﻿@model IEnumerable<DataTask.Models.Student>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+            <th>Class</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.StudentId</td>
+                <td>@student.Class.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Add New Student</a>
